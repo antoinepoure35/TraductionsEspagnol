@@ -11,12 +11,26 @@
 <body>
 
     <h1>Révisions Espagnol</h1>
-
-    <div class="toolbar">
+	<div class="direction-selector">
+	    <label>
+	        <input type="radio" name="direction" value="fr-es">
+	        FR→ES
+	    </label>
+	
+	    <label>
+	        <input type="radio" name="direction" value="es-fr">
+	        ES→FR
+	    </label>
+	
+	    <label>
+	        <input type="radio" name="direction" value="random" checked>
+	        MIXTE
+	    </label>
+	</div>
+	<div class="toolbar">
         <button id="newWordBtn">Nouveau mot</button>
         <button id="correctionBtn">Correction</button>
     </div>
-
     <div id="wordDisplay">
         Sélectionnez une ou plusieurs séquences.
     </div>
