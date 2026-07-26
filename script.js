@@ -131,15 +131,35 @@ async function nouveauMot() {
             )
         ];
 
-    if (Math.random() < 0.5) {
-
+    const direction =
+        document.querySelector(
+            'input[name="direction"]:checked'
+        ).value;
+    
+    if (direction === "fr-es") {
+    
         motActuel.question = motActuel.fr;
         motActuel.reponse = motActuel.es;
-
-    } else {
-
+    }
+    
+    else if (direction === "es-fr") {
+    
         motActuel.question = motActuel.es;
         motActuel.reponse = motActuel.fr;
+    }
+    
+    else {
+    
+        if (Math.random() < 0.5) {
+    
+            motActuel.question = motActuel.fr;
+            motActuel.reponse = motActuel.es;
+    
+        } else {
+    
+            motActuel.question = motActuel.es;
+            motActuel.reponse = motActuel.fr;
+        }
     }
 
     document.getElementById("wordDisplay")
