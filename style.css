@@ -57,3 +57,10 @@ button {
     display: block;
     margin: 8px 0;
 }
+
+.direction-selector {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
